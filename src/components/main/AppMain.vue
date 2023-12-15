@@ -1,5 +1,13 @@
 <script>
-export default {};
+import { store } from '../../store';
+
+export default {
+    data() {
+        return {
+            store,
+        };
+    }
+};
 
 </script>
 

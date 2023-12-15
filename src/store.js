@@ -1,9 +1,9 @@
 import { reactive } from "vue";
+import config from "./config";
 
 export const store = reactive({
-  searchFilm: "",
-  searchResult: [],
-  urlBase: "https://api.themoviedb.org/3/search/movie?api_key=",
-  apiKey: "87ea05489a3bdfb45e785641011fc7f1",
-  lenguage: "",
+  searchKey: "",
+  searchResultFilm: [],
+  searchResultTv: [],
+  config,
 });

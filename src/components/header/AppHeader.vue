@@ -1,5 +1,18 @@
 <script>
-export default {};
+import axios from 'axios';
+import { store } from '../../store';
+export default {
+    data() {
+        return {
+            store,
+        }
+
+    },
+
+    methods: {
+
+    }
+};
 
 </script>
 
@@ -10,7 +23,7 @@ export default {};
         </div>
         <div class="right-header">
             <input type="text" placeholder="Search">
-            <button>Debug</button>
+            <button>Search</button>
         </div>
     </div>
 </template>
