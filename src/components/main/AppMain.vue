@@ -12,9 +12,8 @@ export default {
         };
     },
     methods: {
-        getFullImageUrl(backdrop_path
-        ) {
-            return `https://image.tmdb.org/t/p/w300${backdrop_path}`;
+        getFullImageUrl(Path) {
+            return `https://image.tmdb.org/t/p/w300${Path}`;
         },
     },
 };
