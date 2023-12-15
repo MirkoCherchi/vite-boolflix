@@ -50,14 +50,6 @@ export default {
     <AppMain />
 </template>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    padding: 20px;
-}
+<style lang="scss">
+@use "../src/assets/styles/style.scss";
 </style>

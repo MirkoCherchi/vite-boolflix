@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-    <div class="container-header">
+    <div class="container-header d-flex justify-content-between align-items-center p-4">
         <div class="left-header">
             <div class="logo">Logo</div>
         </div>
@@ -33,11 +33,6 @@ export default {
 
 <style>
 .container-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
     background-color: red;
-    padding: 0 20px;
 }
 </style>

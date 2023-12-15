@@ -13,7 +13,7 @@ export default {
     },
     methods: {
         getFullImageUrl(Pathimg) {
-            return `https://image.tmdb.org/t/p/w300${Pathimg}`;
+            return `https://image.tmdb.org/t/p/w342${Pathimg}`;
         },
         voteStar(vote) {
             const finalVote = Math.ceil(vote / 2);
@@ -24,16 +24,18 @@ export default {
 </script>
 
 <template>
-    <main>
-        <div v-if="store.searchResultFilm.length">
-            <h2>Film</h2>
-            <ul>
-                <li v-for="movie in store.searchResultFilm">
-                    <AppMainFIlm :title="movie.title" :original_title="movie.original_title"
-                        :language="movie.original_language" :vote="voteStar(movie.vote_average)"
-                        :languageMap="store.languageMap" :imageUrl="getFullImageUrl(movie.poster_path)" />
-                </li>
-            </ul>
+    <main class="container-fluid">
+        <div class="" v-if="store.searchResultFilm.length">
+            <h2 class="text-center">Film</h2>
+            <div class="">
+                <ul class="d-flex flex-wrap flex-start gap-3 p-0">
+                    <li class="" v-for="movie in store.searchResultFilm">
+                        <AppMainFIlm :title="movie.title" :original_title="movie.original_title"
+                            :language="movie.original_language" :vote="voteStar(movie.vote_average)"
+                            :languageMap="store.languageMap" :imageUrl="getFullImageUrl(movie.poster_path)" />
+                    </li>
+                </ul>
+            </div>
         </div>
         <div v-if="store.searchResultTv.length">
             <h2>Serie TV</h2>
