@@ -16,9 +16,9 @@ export default {
             return `https://image.tmdb.org/t/p/w300${Pathimg}`;
         },
         voteStar(vote) {
-            const finalVote = Math.ceil(vote / 2)
-            return Math.min(Math.max(finalVote, 1), 5);
-        }
+            const finalVote = Math.ceil(vote / 2);
+            return finalVote;
+        },
     },
 };
 </script>

@@ -1,7 +1,13 @@
 <script>
-
 export default {
-    props: ["title", "original_title", "language", "vote", 'languageMap', 'imageUrl'],
+    props: [
+        "title",
+        "original_title",
+        "language",
+        "vote",
+        "languageMap",
+        "imageUrl",
+    ],
 };
 </script>
 
@@ -17,7 +23,10 @@ export default {
         </p>
         <p v-else><span class="fi fi-un"></span></p>
 
-        <p>{{ vote }}</p>
+        <div>
+            <font-awesome-icon icon="fa-solid fa-star" v-for="n in vote" />
+            <font-awesome-icon icon="fa-regular fa-star" v-for="n in 5 - vote" />
+        </div>
     </div>
 </template>
 
