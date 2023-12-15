@@ -11,6 +11,12 @@ export default {
             store,
         };
     },
+    methods: {
+        getFullImageUrl(backdrop_path
+        ) {
+            return `https://image.tmdb.org/t/p/w300${backdrop_path}`;
+        },
+    },
 };
 </script>
 
@@ -21,7 +27,8 @@ export default {
             <ul>
                 <li v-for="movie in store.searchResultFilm">
                     <AppMainFIlm :title="movie.title" :original_title="movie.original_title"
-                        :language="movie.original_language" :vote="movie.vote_average" :languageMap="store.languageMap" />
+                        :language="movie.original_language" :vote="movie.vote_average" :languageMap="store.languageMap"
+                        :imageUrl="getFullImageUrl(movie.poster_path)" />
                 </li>
             </ul>
         </div>
@@ -30,7 +37,8 @@ export default {
             <ul>
                 <li v-for="tv in store.searchResultTv">
                     <AppMainFIlm :title="tv.name" :original_title="tv.original_name" :language="tv.original_language"
-                        :vote="tv.vote_average" :languageMap="store.languageMap" />
+                        :vote="tv.vote_average" :languageMap="store.languageMap"
+                        :imageUrl="getFullImageUrl(tv.poster_path)" />
                 </li>
             </ul>
         </div>
