@@ -5,6 +5,7 @@ export const store = reactive({
   searchKey: "",
   searchResultFilm: [],
   searchResultTv: [],
+
   config,
   language: "it-IT",
   languageMap: {

@@ -1,8 +1,18 @@
 @use './reset' as *;
+@use './typography' as *;
 @import "../../../node_modules/flag-icons/css/flag-icons.min.css";
 @import "bootstrap/scss/bootstrap";
 
+
 body{
-    background-color: green;
+    background-color: $primary-color;
+}
+
+
+h2{
+    color: $second-option-color;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px;
 }
 
