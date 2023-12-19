@@ -67,7 +67,7 @@ export default {
 
 <template>
     <!-- Struttura principale della pagina -->
-    <main class="container-fluid">
+    <main class="container-fluid p-0">
         <!-- Sezione visualizzata quando non ci sono risultati di ricerca -->
         <div v-if="!store.searchResultFilm.length && !store.searchResultTv.length">
             <div class="center-cont">
